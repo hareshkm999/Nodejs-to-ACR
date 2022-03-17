@@ -6,7 +6,7 @@ app = Flask(__name__)
 
 @app.route("/", methods=['GET', 'POST'])
 def index():
-    return {"data": "Application ran successfully - FastAPI"}
+    return {"data": "Application ran successfully - FastAPI_V2.0"}
 
 
 if __name__ == "__main__":
