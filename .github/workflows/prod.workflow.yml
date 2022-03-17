@@ -33,7 +33,7 @@ jobs:
       uses: azure/webapps-deploy@v2
       with:
         app-name: 'fastapi777-cd'
-        images: 'fastapicd.azurecr.io/fastapi-cd:${{ github.sha }}'
+        images: 'fastapicd777.azurecr.io/fastapi-cd:${{ github.sha }}'
         slot-name: 'staging'
 
     - name: Azure logout
