@@ -34,7 +34,7 @@ jobs:
       with:
         app-name: 'flaskapi-cd'
         images: 'flaskapicd.azurecr.io/flaskapi-cd:${{ github.sha }}'
-        slot-name: 'staging'
+        slot-name: 'PRODUCTION'
 
     - name: Azure logout
       run: 
