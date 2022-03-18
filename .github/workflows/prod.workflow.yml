@@ -26,7 +26,7 @@ jobs:
         password: ${{ secrets.REGISTRY_PASSWORD }}
      
     - name: Build and push container image to registry 
-      run:
+      run: |
         docker build . -t flaskapicd.azurecr.io/flaskapi-cd:${{ github.sha }}
         docker push flaskapicd.azurecr.io/flaskapi-cd:${{ github.sha }}
     - name: Deploy to App Service
