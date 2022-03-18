@@ -1,18 +1,12 @@
-from wsgiref import simple_server
-from flask import Flask, request, render_template
-from flask import Response
+from flask import Flask
 
 app = Flask(__name__)
 
-@app.route("/", methods=['GET', 'POST'])
+
+@app.route('/', methods=['GET', 'POST'])
 def index():
-    return {"data": "Application ran successfully - FastAPI_V2.0"}
+    return "Flask app is running"
 
 
 if __name__ == "__main__":
-    host = '0.0.0.0'
-    port = 8800
-    httpd = simple_server.make_server(host, port, app)
-    # print("Serving on %s %d" % (host, port))
-    print("hi")
-    httpd.serve_forever()
+    app.run(host="0.0.0.0",port=5200)
